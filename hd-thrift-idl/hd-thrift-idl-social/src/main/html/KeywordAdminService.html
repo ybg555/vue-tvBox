@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: KeywordAdminService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: KeywordAdminService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>KeywordAdminService</td><td><a href="#Svc_IKeywordAdminServiceGetKeywordList">IKeywordAdminServiceGetKeywordList</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceGetKeywordList_getKeywordList">getKeywordList</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceAddKeyword">IKeywordAdminServiceAddKeyword</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceAddKeyword_addKeyword">addKeyword</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceUpdateKeyword">IKeywordAdminServiceUpdateKeyword</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceUpdateKeyword_updateKeyword">updateKeyword</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceUpdateKeywordStatus">IKeywordAdminServiceUpdateKeywordStatus</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceUpdateKeywordStatus_updateKeywordStatus">updateKeywordStatus</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceDeleteKeyword">IKeywordAdminServiceDeleteKeyword</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceDeleteKeyword_deleteKeyword">deleteKeyword</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceDeleteKeywordBatch">IKeywordAdminServiceDeleteKeywordBatch</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceDeleteKeywordBatch_deleteKeywordBatch">deleteKeywordBatch</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceGetKeywordById">IKeywordAdminServiceGetKeywordById</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceGetKeywordById_getKeywordById">getKeywordById</a></li>
+</ul>
+<a href="#Svc_IKeywordAdminServiceImportKeyword">IKeywordAdminServiceImportKeyword</a><br/>
+<ul>
+<li><a href="#Fn_IKeywordAdminServiceImportKeyword_importKeyword">importKeyword</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_IKeywordAdminServiceGetKeywordList">Service: IKeywordAdminServiceGetKeywordList</h3>
+关键词(后端）
+
+@since 1.0.0
+@author zhijian.li
+@date 2015年11月27日下午5:42:17
+
+<br/><div class="definition"><h4 id="Fn_IKeywordAdminServiceGetKeywordList_getKeywordList">Function: IKeywordAdminServiceGetKeywordList.getKeywordList</h4>
+<pre><code>string</code> getKeywordList(<code>string</code> params)
+</pre>
+列表（分页）
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceAddKeyword">Service: IKeywordAdminServiceAddKeyword</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceAddKeyword_addKeyword">Function: IKeywordAdminServiceAddKeyword.addKeyword</h4>
+<pre><code>string</code> addKeyword(<code>string</code> params)
+</pre>
+新增
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceUpdateKeyword">Service: IKeywordAdminServiceUpdateKeyword</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceUpdateKeyword_updateKeyword">Function: IKeywordAdminServiceUpdateKeyword.updateKeyword</h4>
+<pre><code>string</code> updateKeyword(<code>string</code> params)
+</pre>
+更新
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceUpdateKeywordStatus">Service: IKeywordAdminServiceUpdateKeywordStatus</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceUpdateKeywordStatus_updateKeywordStatus">Function: IKeywordAdminServiceUpdateKeywordStatus.updateKeywordStatus</h4>
+<pre><code>string</code> updateKeywordStatus(<code>string</code> params)
+</pre>
+批量更新状态
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceDeleteKeyword">Service: IKeywordAdminServiceDeleteKeyword</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceDeleteKeyword_deleteKeyword">Function: IKeywordAdminServiceDeleteKeyword.deleteKeyword</h4>
+<pre><code>string</code> deleteKeyword(<code>string</code> params)
+</pre>
+删除
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceDeleteKeywordBatch">Service: IKeywordAdminServiceDeleteKeywordBatch</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceDeleteKeywordBatch_deleteKeywordBatch">Function: IKeywordAdminServiceDeleteKeywordBatch.deleteKeywordBatch</h4>
+<pre><code>string</code> deleteKeywordBatch(<code>string</code> params)
+</pre>
+批量删除
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceGetKeywordById">Service: IKeywordAdminServiceGetKeywordById</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceGetKeywordById_getKeywordById">Function: IKeywordAdminServiceGetKeywordById.getKeywordById</h4>
+<pre><code>string</code> getKeywordById(<code>string</code> params)
+</pre>
+详情
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_IKeywordAdminServiceImportKeyword">Service: IKeywordAdminServiceImportKeyword</h3>
+<div class="definition"><h4 id="Fn_IKeywordAdminServiceImportKeyword_importKeyword">Function: IKeywordAdminServiceImportKeyword.importKeyword</h4>
+<pre><code>string</code> importKeyword(<code>string</code> params)
+</pre>
+导入
+
+@param params
+@return
+
+@author jinfeng.bin
+<br/></div></div></body></html>

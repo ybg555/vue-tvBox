@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="hd-thrift-idl" default="thrift"  basedir=".">
+	<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+	
+    <description>
+        Generate code from thrift files
+    </description>
+
+    <property name="thrift.command" value="thrift"/>
+
+    <property name="gen-source.basedir" value="target/generated-sources"/>
+    <property name="java.srcdir"      value="src/main/java"/>
+	<property name="cocoa.srcdir"      value="src/main/cocoa"/>
+	<property name="js.srcdir"      value="src/main/js"/>
+	<property name="nodejs.srcdir"      value="src/main/nodejs"/>
+	<property name="html.srcdir"      value="src/main/html"/>
+	<property name="php.srcdir"      value="src/main/php"/>
+	<property name="python.srcdir"      value="src/main/python"/>
+
+	
+    <target name="init-taskdefs">
+        <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="${ant-contrib:ant-contrib:jar}"/>
+    </target>
+	
+    <target name="init">
+        <!-- good for debugging -->
+        <!--<echoproperties/>-->
+
+        <!-- prep dirs -->
+        <mkdir dir="${gen-source.basedir}" />
+    	<mkdir dir="${java.srcdir}" />
+    	<mkdir dir="${cocoa.srcdir}" />
+    	<mkdir dir="${js.srcdir}" />
+    	<mkdir dir="${nodejs.srcdir}" />
+    	<mkdir dir="${html.srcdir}" />
+    	<mkdir dir="${php.srcdir}" />
+    	<mkdir dir="${python.srcdir}" />
+    	
+        <delete>
+            <fileset dir="${gen-source.basedir}" includes="**/*"/>
+        </delete>
+    </target>
+
+	<target name="exec-php-thrift">
+    	<echo>thrift php: ${file.full.name}</echo>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="php"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+		
+		<propertyregex property="php.file.name"  
+		                  input="${file.full.name}"  
+		                  regexp="(.*)(\\|\/)(\w+)\.thrift"  
+		                  select="\3"  
+		                  casesensitive="false" />
+		<rename src="${gen-source.basedir}/gen-php/Types.php" dest="${gen-source.basedir}/gen-php/${php.file.name}.php"/>
+    </target>
+	
+    <target name="exec-thrift" depends="exec-php-thrift">
+    	<echo>thrift: ${file.full.name}</echo>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="java"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="cocoa"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="js"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="js:node"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="html"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	<exec executable="${thrift.command}" >
+            <arg value="--gen" />
+            <arg value="py"/>
+            <arg value="-o"/>
+            <arg value="${gen-source.basedir}"/>
+            <arg value="${file.full.name}"/>
+        </exec>
+    	
+    </target>
+	
+	<target name="gen-thrift">  
+		<foreach list="" target="exec-thrift" param="file.full.name" delimiter=",">  
+			<fileset dir="./">  
+				<include name="**/*.thrift"/>  
+			</fileset>  
+		</foreach>  
+		
+		<replaceregexp encoding="utf-8">
+		    <regexp pattern="(.*)(\r\n)(.*)"/>
+		    <substitution expression="#coding=utf-8\2\2\1\2\3"/>
+		    <fileset dir=".">
+		        <include name="**/*.py"/>
+		    </fileset>
+		</replaceregexp>
+	</target>
+
+    <target name="post-process">
+        <!-- move java sources into place -->
+        <delete>
+        	<fileset dir="${java.srcdir}" includes="**/*"/>
+        	<fileset dir="${cocoa.srcdir}" includes="**/*"/>
+        	<fileset dir="${js.srcdir}" includes="**/*"/>
+        	<fileset dir="${nodejs.srcdir}" includes="**/*"/>
+        	<fileset dir="${html.srcdir}" includes="**/*"/>
+        	<fileset dir="${php.srcdir}" includes="**/*"/>
+        	<fileset dir="${python.srcdir}" includes="**/*"/>
+        </delete>
+        <echo>srcdir is ${java.srcdir}/com</echo>
+    	<move todir="${java.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-java/" includes="**/*"/>
+        </move>
+    	<move todir="${cocoa.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-cocoa/" includes="**/*"/>
+        </move>
+    	<move todir="${js.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-js/" includes="**/*"/>
+        </move>
+    	<move todir="${nodejs.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-nodejs/" includes="**/*"/>
+        </move>
+    	<move todir="${html.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-html/" includes="**/*"/>
+        </move>
+    	<move todir="${php.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-php/" includes="**/*"/>
+        </move>
+    	<move todir="${python.srcdir}/">
+            <fileset dir="${gen-source.basedir}/gen-py/" includes="**/*"/>
+        </move>
+    </target>
+
+    <target name="thrift" depends="init-taskdefs, init, gen-thrift, post-process"/>
+
+</project>

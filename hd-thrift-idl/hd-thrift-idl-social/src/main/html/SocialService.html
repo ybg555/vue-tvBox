@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: SocialService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: SocialService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>SocialService</td><td><a href="#Svc_ISocialServiceGetLabelList">ISocialServiceGetLabelList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetLabelList_getLabelList">getLabelList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetLabelDetailById">ISocialServiceGetLabelDetailById</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetLabelDetailById_getLabelDetailById">getLabelDetailById</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostList">ISocialServiceGetPostList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostList_getPostList">getPostList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceAddPost">ISocialServiceAddPost</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceAddPost_addPost">addPost</a></li>
+</ul>
+<a href="#Svc_ISocialServiceDeletePost">ISocialServiceDeletePost</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceDeletePost_deletePost">deletePost</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostById">ISocialServiceGetPostById</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostById_getPostById">getPostById</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostByUser">ISocialServiceGetPostByUser</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostByUser_getPostByUser">getPostByUser</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetNewMsgCount">ISocialServiceGetNewMsgCount</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetNewMsgCount_getNewMsgCount">getNewMsgCount</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetMessageList">ISocialServiceGetMessageList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetMessageList_getMessageList">getMessageList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceAddComment">ISocialServiceAddComment</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceAddComment_addComment">addComment</a></li>
+</ul>
+<a href="#Svc_ISocialServiceDeleteComment">ISocialServiceDeleteComment</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceDeleteComment_deleteComment">deleteComment</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetCommentList">ISocialServiceGetCommentList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetCommentList_getCommentList">getCommentList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceAddPostInform">ISocialServiceAddPostInform</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceAddPostInform_addPostInform">addPostInform</a></li>
+</ul>
+<a href="#Svc_ISocialServiceAddPraise">ISocialServiceAddPraise</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceAddPraise_addPraise">addPraise</a></li>
+</ul>
+<a href="#Svc_ISocialServiceCancelPraise">ISocialServiceCancelPraise</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceCancelPraise_cancelPraise">cancelPraise</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPraiseList">ISocialServiceGetPraiseList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPraiseList_getPraiseList">getPraiseList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceAddActivityApply">ISocialServiceAddActivityApply</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceAddActivityApply_addActivityApply">addActivityApply</a></li>
+</ul>
+<a href="#Svc_ISocialServiceCancelActivityApply">ISocialServiceCancelActivityApply</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceCancelActivityApply_cancelActivityApply">cancelActivityApply</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetReasonList">ISocialServiceGetReasonList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetReasonList_getReasonList">getReasonList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetActivityApplyList">ISocialServiceGetActivityApplyList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetActivityApplyList_getActivityApplyList">getActivityApplyList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostInfoList">ISocialServiceGetPostInfoList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostInfoList_getPostInfoList">getPostInfoList</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostByUserId">ISocialServiceGetPostByUserId</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostByUserId_getPostByUserId">getPostByUserId</a></li>
+</ul>
+<a href="#Svc_ISocialServiceGetPostDetail">ISocialServiceGetPostDetail</a><br/>
+<ul>
+<li><a href="#Fn_ISocialServiceGetPostDetail_getPostDetail">getPostDetail</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_ISocialServiceGetLabelList">Service: ISocialServiceGetLabelList</h3>
+社交服务
+
+@since 1.0.0
+@author bjf
+@date 2015年9月1日 下午5:34:32
+
+<br/><div class="definition"><h4 id="Fn_ISocialServiceGetLabelList_getLabelList">Function: ISocialServiceGetLabelList.getLabelList</h4>
+<pre><code>list&lt;<code><a href="TLabel.html#Struct_TLabel">TLabel.TLabel</a></code>&gt;</code> getLabelList(<code>i32</code> num)
+</pre>
+取标签列表
+
+@param num
+           取多少个标签
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetLabelDetailById">Service: ISocialServiceGetLabelDetailById</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetLabelDetailById_getLabelDetailById">Function: ISocialServiceGetLabelDetailById.getLabelDetailById</h4>
+<pre><code>string</code> getLabelDetailById(<code>i32</code> id)
+</pre>
+取标签详情
+
+@param id
+           标签id
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostList">Service: ISocialServiceGetPostList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPostList_getPostList">Function: ISocialServiceGetPostList.getPostList</h4>
+<pre><code>list&lt;<code><a href="TPost.html#Struct_TPost">TPost.TPost</a></code>&gt;</code> getPostList(<code>i32</code> communityId,
+                              <code>i32</code> labelId,
+                              <code>i32</code> currentPage,
+                              <code>i32</code> pageSize)
+</pre>
+帖子列表
+
+@param communityId
+@param labelId
+@param currentPage
+@param pageSize
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceAddPost">Service: ISocialServiceAddPost</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceAddPost_addPost">Function: ISocialServiceAddPost.addPost</h4>
+<pre><code>i32</code> addPost(<code><a href="TPost.html#Struct_TPost">TPost.TPost</a></code> post)
+</pre>
+发布帖子
+
+@param post
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceDeletePost">Service: ISocialServiceDeletePost</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceDeletePost_deletePost">Function: ISocialServiceDeletePost.deletePost</h4>
+<pre><code>bool</code> deletePost(<code>i32</code> id,
+                <code>string</code> mark)
+</pre>删除帖子
+
+@param id
+@param mark
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostById">Service: ISocialServiceGetPostById</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPostById_getPostById">Function: ISocialServiceGetPostById.getPostById</h4>
+<pre><code><a href="TPost.html#Struct_TPost">TPost.TPost</a></code> getPostById(<code>i32</code> id)
+</pre>
+帖子详情
+
+@param id
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostByUser">Service: ISocialServiceGetPostByUser</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPostByUser_getPostByUser">Function: ISocialServiceGetPostByUser.getPostByUser</h4>
+<pre><code>list&lt;<code><a href="TPost.html#Struct_TPost">TPost.TPost</a></code>&gt;</code> getPostByUser(<code>i64</code> userId,
+                                <code>i32</code> currentPage,
+                                <code>i32</code> pageSize)
+</pre>
+用户发布的帖子列表
+
+@param userId
+@param currentPage
+@param pageSize
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetNewMsgCount">Service: ISocialServiceGetNewMsgCount</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetNewMsgCount_getNewMsgCount">Function: ISocialServiceGetNewMsgCount.getNewMsgCount</h4>
+<pre><code>i32</code> getNewMsgCount()
+</pre>
+新消息的数目
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetMessageList">Service: ISocialServiceGetMessageList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetMessageList_getMessageList">Function: ISocialServiceGetMessageList.getMessageList</h4>
+<pre><code>list&lt;<code><a href="TMessageBox.html#Struct_TMessageBox">TMessageBox.TMessageBox</a></code>&gt;</code> getMessageList()
+</pre>
+新消息列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceAddComment">Service: ISocialServiceAddComment</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceAddComment_addComment">Function: ISocialServiceAddComment.addComment</h4>
+<pre><code>i32</code> addComment(<code><a href="TComment.html#Struct_TComment">TComment.TComment</a></code> comm)
+</pre>
+发表评论
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceDeleteComment">Service: ISocialServiceDeleteComment</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceDeleteComment_deleteComment">Function: ISocialServiceDeleteComment.deleteComment</h4>
+<pre><code>bool</code> deleteComment(<code>i32</code> id)
+</pre>
+删除评论
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetCommentList">Service: ISocialServiceGetCommentList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetCommentList_getCommentList">Function: ISocialServiceGetCommentList.getCommentList</h4>
+<pre><code>list&lt;<code><a href="TComment.html#Struct_TComment">TComment.TComment</a></code>&gt;</code> getCommentList(<code>i32</code> postId,
+                                       <code>i32</code> currentPage,
+                                       <code>i32</code> pageSize)
+</pre>
+帖子评论列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceAddPostInform">Service: ISocialServiceAddPostInform</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceAddPostInform_addPostInform">Function: ISocialServiceAddPostInform.addPostInform</h4>
+<pre><code>bool</code> addPostInform(<code>i32</code> postId,
+                   <code>string</code> content)
+</pre>
+举报帖子
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceAddPraise">Service: ISocialServiceAddPraise</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceAddPraise_addPraise">Function: ISocialServiceAddPraise.addPraise</h4>
+<pre><code>bool</code> addPraise(<code>i32</code> postId,
+               <code>i64</code> postUserId)
+</pre>
+点赞
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceCancelPraise">Service: ISocialServiceCancelPraise</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceCancelPraise_cancelPraise">Function: ISocialServiceCancelPraise.cancelPraise</h4>
+<pre><code>bool</code> cancelPraise(<code>i32</code> postId)
+</pre>
+取消点赞
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPraiseList">Service: ISocialServiceGetPraiseList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPraiseList_getPraiseList">Function: ISocialServiceGetPraiseList.getPraiseList</h4>
+<pre><code>list&lt;<code><a href="TPraise.html#Struct_TPraise">TPraise.TPraise</a></code>&gt;</code> getPraiseList(<code>i32</code> postId,
+                                    <code>i32</code> currentPage,
+                                    <code>i32</code> pageSize)
+</pre>
+帖子的点赞用户列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceAddActivityApply">Service: ISocialServiceAddActivityApply</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceAddActivityApply_addActivityApply">Function: ISocialServiceAddActivityApply.addActivityApply</h4>
+<pre><code>bool</code> addActivityApply(<code>i32</code> postId)
+</pre>
+活动报名
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceCancelActivityApply">Service: ISocialServiceCancelActivityApply</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceCancelActivityApply_cancelActivityApply">Function: ISocialServiceCancelActivityApply.cancelActivityApply</h4>
+<pre><code>bool</code> cancelActivityApply(<code>i32</code> postId)
+</pre>
+取消活动报名
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetReasonList">Service: ISocialServiceGetReasonList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetReasonList_getReasonList">Function: ISocialServiceGetReasonList.getReasonList</h4>
+<pre><code>list&lt;<code><a href="TReason.html#Struct_TReason">TReason.TReason</a></code>&gt;</code> getReasonList()
+</pre>
+原因列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetActivityApplyList">Service: ISocialServiceGetActivityApplyList</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetActivityApplyList_getActivityApplyList">Function: ISocialServiceGetActivityApplyList.getActivityApplyList</h4>
+<pre><code>list&lt;<code><a href="TActivityApply.html#Struct_TActivityApply">TActivityApply.TActivityApply</a></code>&gt;</code> getActivityApplyList(<code>i32</code> postId,
+                                                         <code>i32</code> currentPage,
+                                                         <code>i32</code> pageSize)
+</pre>
+帖子的点赞用户列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostInfoList">Service: ISocialServiceGetPostInfoList</h3>
+0406 *******************************************************************************
+<br/><div class="definition"><h4 id="Fn_ISocialServiceGetPostInfoList_getPostInfoList">Function: ISocialServiceGetPostInfoList.getPostInfoList</h4>
+<pre><code>string</code> getPostInfoList(<code>string</code> params)
+</pre>
+帖子列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostByUserId">Service: ISocialServiceGetPostByUserId</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPostByUserId_getPostByUserId">Function: ISocialServiceGetPostByUserId.getPostByUserId</h4>
+<pre><code>string</code> getPostByUserId(<code>string</code> params)
+</pre>
+用户发布的帖子列表
+
+@return
+
+@author jinfeng.bin
+<br/></div><h3 id="Svc_ISocialServiceGetPostDetail">Service: ISocialServiceGetPostDetail</h3>
+<div class="definition"><h4 id="Fn_ISocialServiceGetPostDetail_getPostDetail">Function: ISocialServiceGetPostDetail.getPostDetail</h4>
+<pre><code>string</code> getPostDetail(<code>string</code> params)
+</pre>
+帖子详情
+
+@return
+
+@author jinfeng.bin
+<br/></div></div></body></html>

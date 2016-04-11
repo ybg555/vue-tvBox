@@ -1,0 +1,3 @@
+#coding=utf-8
+
+__all__ = ['ttypes', 'constants', 'ISocialServiceGetLabelList', 'ISocialServiceGetLabelDetailById', 'ISocialServiceGetPostList', 'ISocialServiceAddPost', 'ISocialServiceDeletePost', 'ISocialServiceGetPostById', 'ISocialServiceGetPostByUser', 'ISocialServiceGetNewMsgCount', 'ISocialServiceGetMessageList', 'ISocialServiceAddComment', 'ISocialServiceDeleteComment', 'ISocialServiceGetCommentList', 'ISocialServiceAddPostInform', 'ISocialServiceAddPraise', 'ISocialServiceCancelPraise', 'ISocialServiceGetPraiseList', 'ISocialServiceAddActivityApply', 'ISocialServiceCancelActivityApply', 'ISocialServiceGetReasonList', 'ISocialServiceGetActivityApplyList', 'ISocialServiceGetPostInfoList', 'ISocialServiceGetPostByUserId', 'ISocialServiceGetPostDetail']

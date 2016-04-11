@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: VoteAdminService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: VoteAdminService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>VoteAdminService</td><td><a href="#Svc_IVoteServiceAddVote">IVoteServiceAddVote</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceAddVote_addVote">addVote</a></li>
+</ul>
+<a href="#Svc_IVoteServiceUpdateVote">IVoteServiceUpdateVote</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceUpdateVote_updateVote">updateVote</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetVoteList">IVoteServiceGetVoteList</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetVoteList_getVoteList">getVoteList</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetVote">IVoteServiceGetVote</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetVote_getVote">getVote</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetJoinList">IVoteServiceGetJoinList</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetJoinList_getJoinList">getJoinList</a></li>
+</ul>
+<a href="#Svc_IVoteServiceSetCandidate">IVoteServiceSetCandidate</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceSetCandidate_setCandidate">setCandidate</a></li>
+</ul>
+<a href="#Svc_IVoteServiceSetPrize">IVoteServiceSetPrize</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceSetPrize_setPrize">setPrize</a></li>
+</ul>
+<a href="#Svc_IVoteServiceEditAddVotes">IVoteServiceEditAddVotes</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceEditAddVotes_editAddVotes">editAddVotes</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_IVoteServiceAddVote">Service: IVoteServiceAddVote</h3>
+投票活动后台
+
+@since 1.5.0
+@author yunbiao.liu
+@date 2015年2月29日
+
+<br/><div class="definition"><h4 id="Fn_IVoteServiceAddVote_addVote">Function: IVoteServiceAddVote.addVote</h4>
+<pre><code>string</code> addVote(<code>string</code> params)
+</pre>*
+* 新增投票活动
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceUpdateVote">Service: IVoteServiceUpdateVote</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceUpdateVote_updateVote">Function: IVoteServiceUpdateVote.updateVote</h4>
+<pre><code>string</code> updateVote(<code>string</code> params)
+</pre>*
+* 更新投票活动
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetVoteList">Service: IVoteServiceGetVoteList</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetVoteList_getVoteList">Function: IVoteServiceGetVoteList.getVoteList</h4>
+<pre><code>string</code> getVoteList(<code>string</code> params)
+</pre>*
+* 投票活动列表
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetVote">Service: IVoteServiceGetVote</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetVote_getVote">Function: IVoteServiceGetVote.getVote</h4>
+<pre><code>string</code> getVote(<code>string</code> params)
+</pre>*
+* 查看投票活动详情
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetJoinList">Service: IVoteServiceGetJoinList</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetJoinList_getJoinList">Function: IVoteServiceGetJoinList.getJoinList</h4>
+<pre><code>string</code> getJoinList(<code>string</code> params)
+</pre>*
+* 报名人数列表
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceSetCandidate">Service: IVoteServiceSetCandidate</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceSetCandidate_setCandidate">Function: IVoteServiceSetCandidate.setCandidate</h4>
+<pre><code>string</code> setCandidate(<code>string</code> params)
+</pre>*
+* 设置候选人
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceSetPrize">Service: IVoteServiceSetPrize</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceSetPrize_setPrize">Function: IVoteServiceSetPrize.setPrize</h4>
+<pre><code>string</code> setPrize(<code>string</code> params)
+</pre>*
+* 设置获奖人
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceEditAddVotes">Service: IVoteServiceEditAddVotes</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceEditAddVotes_editAddVotes">Function: IVoteServiceEditAddVotes.editAddVotes</h4>
+<pre><code>string</code> editAddVotes(<code>string</code> params)
+</pre>*
+* 设置获奖人
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div></div></body></html>

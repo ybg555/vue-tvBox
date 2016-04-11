@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: ActivityAdminService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: ActivityAdminService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>ActivityAdminService</td><td><a href="#Svc_IActivityAdminServiceGetAdminActivityList">IActivityAdminServiceGetAdminActivityList</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceGetAdminActivityList_getAdminActivityList">getAdminActivityList</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceAddAdminActivity">IActivityAdminServiceAddAdminActivity</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceAddAdminActivity_addAdminActivity">addAdminActivity</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceEditAdminActivity">IActivityAdminServiceEditAdminActivity</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceEditAdminActivity_editAdminActivity">editAdminActivity</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceGetAdminActivityById">IActivityAdminServiceGetAdminActivityById</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceGetAdminActivityById_getAdminActivityById">getAdminActivityById</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceUpdateAdminActivityStatus">IActivityAdminServiceUpdateAdminActivityStatus</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceUpdateAdminActivityStatus_updateAdminActivityStatus">updateAdminActivityStatus</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceDeleteAdminActivity">IActivityAdminServiceDeleteAdminActivity</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceDeleteAdminActivity_deleteAdminActivity">deleteAdminActivity</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceGetAdminPostListByActivityId">IActivityAdminServiceGetAdminPostListByActivityId</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceGetAdminPostListByActivityId_getAdminPostListByActivityId">getAdminPostListByActivityId</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceAddAdminPrize">IActivityAdminServiceAddAdminPrize</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceAddAdminPrize_addAdminPrize">addAdminPrize</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceDeleteAdminPrize">IActivityAdminServiceDeleteAdminPrize</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceDeleteAdminPrize_deleteAdminPrize">deleteAdminPrize</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceUpdateAdminPrizes">IActivityAdminServiceUpdateAdminPrizes</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceUpdateAdminPrizes_updateAdminPrizes">updateAdminPrizes</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceGetAdminPrizeList">IActivityAdminServiceGetAdminPrizeList</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceGetAdminPrizeList_getAdminPrizeList">getAdminPrizeList</a></li>
+</ul>
+<a href="#Svc_IActivityAdminServiceConfirmPrizeList">IActivityAdminServiceConfirmPrizeList</a><br/>
+<ul>
+<li><a href="#Fn_IActivityAdminServiceConfirmPrizeList_confirmPrizeList">confirmPrizeList</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_IActivityAdminServiceGetAdminActivityList">Service: IActivityAdminServiceGetAdminActivityList</h3>
+活动服务(后端）
+
+@since 1.1.0
+@author zhijian.li
+@date 2016年1月14日 上午9:09:15
+
+<br/><div class="definition"><h4 id="Fn_IActivityAdminServiceGetAdminActivityList_getAdminActivityList">Function: IActivityAdminServiceGetAdminActivityList.getAdminActivityList</h4>
+<pre><code><a href="TAdminActivityQueryData.html#Struct_TAdminActivityQueryData">TAdminActivityQueryData.TAdminActivityQueryData</a></code> getAdminActivityList(<code>i32</code> currentPage,
+                                                                     <code>i32</code> pageSize)
+</pre>
+查询活动列表
+
+@param currentPage
+         当前页
+@param pageSize
+         显示多少条
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceAddAdminActivity">Service: IActivityAdminServiceAddAdminActivity</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceAddAdminActivity_addAdminActivity">Function: IActivityAdminServiceAddAdminActivity.addAdminActivity</h4>
+<pre><code>bool</code> addAdminActivity(<code>string</code> activity,
+                      <code>string</code> activityCommunities)
+</pre>
+新增活动
+
+@param activity
+@param activityCommunities
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceEditAdminActivity">Service: IActivityAdminServiceEditAdminActivity</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceEditAdminActivity_editAdminActivity">Function: IActivityAdminServiceEditAdminActivity.editAdminActivity</h4>
+<pre><code>bool</code> editAdminActivity(<code>string</code> activity,
+                       <code>string</code> activityCommunities)
+</pre>
+编辑活动
+
+@param activity
+@param activityCommunities
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceGetAdminActivityById">Service: IActivityAdminServiceGetAdminActivityById</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceGetAdminActivityById_getAdminActivityById">Function: IActivityAdminServiceGetAdminActivityById.getAdminActivityById</h4>
+<pre><code><a href="TActivity.html#Struct_TActivity">TActivity.TActivity</a></code> getAdminActivityById(<code>i32</code> id)
+</pre>
+根据活动id取活动信息
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceUpdateAdminActivityStatus">Service: IActivityAdminServiceUpdateAdminActivityStatus</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceUpdateAdminActivityStatus_updateAdminActivityStatus">Function: IActivityAdminServiceUpdateAdminActivityStatus.updateAdminActivityStatus</h4>
+<pre><code>bool</code> updateAdminActivityStatus(<code>i32</code> id,
+                               <code>i32</code> status)
+</pre>
+设置活动状态
+
+@param id
+@param status
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceDeleteAdminActivity">Service: IActivityAdminServiceDeleteAdminActivity</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceDeleteAdminActivity_deleteAdminActivity">Function: IActivityAdminServiceDeleteAdminActivity.deleteAdminActivity</h4>
+<pre><code>bool</code> deleteAdminActivity(<code>i32</code> id)
+</pre>
+删除活动
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceGetAdminPostListByActivityId">Service: IActivityAdminServiceGetAdminPostListByActivityId</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceGetAdminPostListByActivityId_getAdminPostListByActivityId">Function: IActivityAdminServiceGetAdminPostListByActivityId.getAdminPostListByActivityId</h4>
+<pre><code><a href="TAdminPostQueryData.html#Struct_TAdminPostQueryData">TAdminPostQueryData.TAdminPostQueryData</a></code> getAdminPostListByActivityId(<code>i32</code> id,
+                                                                     <code>i32</code> currentPage,
+                                                                     <code>i32</code> pageSize)
+</pre>
+根据活动id查询帖子列表
+
+@param id
+@param currentPage
+@param pageSize
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceAddAdminPrize">Service: IActivityAdminServiceAddAdminPrize</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceAddAdminPrize_addAdminPrize">Function: IActivityAdminServiceAddAdminPrize.addAdminPrize</h4>
+<pre><code>bool</code> addAdminPrize(<code>string</code> prize)
+</pre>
+新增中奖名单
+
+@param prize
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceDeleteAdminPrize">Service: IActivityAdminServiceDeleteAdminPrize</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceDeleteAdminPrize_deleteAdminPrize">Function: IActivityAdminServiceDeleteAdminPrize.deleteAdminPrize</h4>
+<pre><code>bool</code> deleteAdminPrize(<code>i32</code> activityId,
+                      <code>i32</code> postId)
+</pre>
+删除中奖名单
+
+@param activityId
+@param postId
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceUpdateAdminPrizes">Service: IActivityAdminServiceUpdateAdminPrizes</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceUpdateAdminPrizes_updateAdminPrizes">Function: IActivityAdminServiceUpdateAdminPrizes.updateAdminPrizes</h4>
+<pre><code>bool</code> updateAdminPrizes(<code>string</code> prizes)
+</pre>
+批量修改中奖名单，先全部删除，再挑选符合的插入
+
+@param prizes
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceGetAdminPrizeList">Service: IActivityAdminServiceGetAdminPrizeList</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceGetAdminPrizeList_getAdminPrizeList">Function: IActivityAdminServiceGetAdminPrizeList.getAdminPrizeList</h4>
+<pre><code><a href="TAdminPrizeQueryData.html#Struct_TAdminPrizeQueryData">TAdminPrizeQueryData.TAdminPrizeQueryData</a></code> getAdminPrizeList(<code>i32</code> id,
+                                                            <code>i32</code> currentPage,
+                                                            <code>i32</code> pageSize)
+</pre>
+根据活动id查询中奖名单列表
+
+@param id
+@param currentPage
+@param pageSize
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityAdminServiceConfirmPrizeList">Service: IActivityAdminServiceConfirmPrizeList</h3>
+<div class="definition"><h4 id="Fn_IActivityAdminServiceConfirmPrizeList_confirmPrizeList">Function: IActivityAdminServiceConfirmPrizeList.confirmPrizeList</h4>
+<pre><code>bool</code> confirmPrizeList(<code>i32</code> id)
+</pre>
+确认中奖名单，修改活动的字段is_prized为1，推送中奖消息给用户
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div></div></body></html>

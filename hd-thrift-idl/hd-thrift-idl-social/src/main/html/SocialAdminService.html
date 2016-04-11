@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: SocialAdminService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: SocialAdminService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>SocialAdminService</td><td><a href="#Svc_ISocialAdminServiceGetAdminLabelList">ISocialAdminServiceGetAdminLabelList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminLabelList_getAdminLabelList">getAdminLabelList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminLabel">ISocialAdminServiceAddAdminLabel</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminLabel_addAdminLabel">addAdminLabel</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceEditAdminLabel">ISocialAdminServiceEditAdminLabel</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceEditAdminLabel_editAdminLabel">editAdminLabel</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminLabelById">ISocialAdminServiceGetAdminLabelById</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminLabelById_getAdminLabelById">getAdminLabelById</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceUpdateAdminLabelStatus">ISocialAdminServiceUpdateAdminLabelStatus</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceUpdateAdminLabelStatus_updateAdminLabelStatus">updateAdminLabelStatus</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDeleteAdminLabel">ISocialAdminServiceDeleteAdminLabel</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDeleteAdminLabel_deleteAdminLabel">deleteAdminLabel</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminPost">ISocialAdminServiceAddAdminPost</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminPost_addAdminPost">addAdminPost</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminPostUseMobile">ISocialAdminServiceAddAdminPostUseMobile</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminPostUseMobile_addAdminPostUseMobile">addAdminPostUseMobile</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminPostById">ISocialAdminServiceGetAdminPostById</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminPostById_getAdminPostById">getAdminPostById</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminApplyList">ISocialAdminServiceGetAdminApplyList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminApplyList_getAdminApplyList">getAdminApplyList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminCommentList">ISocialAdminServiceGetAdminCommentList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminCommentList_getAdminCommentList">getAdminCommentList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminComment">ISocialAdminServiceAddAdminComment</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminComment_addAdminComment">addAdminComment</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminCommentUseMobile">ISocialAdminServiceAddAdminCommentUseMobile</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminCommentUseMobile_addAdminCommentUseMobile">addAdminCommentUseMobile</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDeleteAdminComment">ISocialAdminServiceDeleteAdminComment</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDeleteAdminComment_deleteAdminComment">deleteAdminComment</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceAddAdminReason">ISocialAdminServiceAddAdminReason</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceAddAdminReason_addAdminReason">addAdminReason</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDeleteAdminReason">ISocialAdminServiceDeleteAdminReason</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDeleteAdminReason_deleteAdminReason">deleteAdminReason</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminPostList">ISocialAdminServiceGetAdminPostList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminPostList_getAdminPostList">getAdminPostList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceUpdateAdminPostStatus">ISocialAdminServiceUpdateAdminPostStatus</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceUpdateAdminPostStatus_updateAdminPostStatus">updateAdminPostStatus</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDeletePostInformFromPostId">ISocialAdminServiceDeletePostInformFromPostId</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDeletePostInformFromPostId_deletePostInformFromPostId">deletePostInformFromPostId</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDealWithIllegal">ISocialAdminServiceDealWithIllegal</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDealWithIllegal_dealWithIllegal">dealWithIllegal</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDealWithLegitimate">ISocialAdminServiceDealWithLegitimate</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDealWithLegitimate_dealWithLegitimate">dealWithLegitimate</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminReasonList">ISocialAdminServiceGetAdminReasonList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminReasonList_getAdminReasonList">getAdminReasonList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminReasonById">ISocialAdminServiceGetAdminReasonById</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminReasonById_getAdminReasonById">getAdminReasonById</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceUpdateAdminReason">ISocialAdminServiceUpdateAdminReason</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceUpdateAdminReason_updateAdminReason">updateAdminReason</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceGetAdminPostInformList">ISocialAdminServiceGetAdminPostInformList</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceGetAdminPostInformList_getAdminPostInformList">getAdminPostInformList</a></li>
+</ul>
+<a href="#Svc_ISocialAdminServiceDeleteAdminPost">ISocialAdminServiceDeleteAdminPost</a><br/>
+<ul>
+<li><a href="#Fn_ISocialAdminServiceDeleteAdminPost_deleteAdminPost">deleteAdminPost</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_ISocialAdminServiceGetAdminLabelList">Service: ISocialAdminServiceGetAdminLabelList</h3>
+社交服务(后端）
+
+@since 1.0.0
+@author zhijian.li
+@date 2015年11月27日下午5:42:17
+
+<br/><div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminLabelList_getAdminLabelList">Function: ISocialAdminServiceGetAdminLabelList.getAdminLabelList</h4>
+<pre><code><a href="TAdminLabelQueryData.html#Struct_TAdminLabelQueryData">TAdminLabelQueryData.TAdminLabelQueryData</a></code> getAdminLabelList(<code>string</code> params)
+</pre>
+取展示标签
+
+@param currentPage
+         当前页
+@param pageSize
+         显示多少条
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminLabel">Service: ISocialAdminServiceAddAdminLabel</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminLabel_addAdminLabel">Function: ISocialAdminServiceAddAdminLabel.addAdminLabel</h4>
+<pre><code>bool</code> addAdminLabel(<code><a href="TAdminLabel.html#Struct_TAdminLabel">TAdminLabel.TAdminLabel</a></code> label)
+</pre>
+新增标签
+
+@param label
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceEditAdminLabel">Service: ISocialAdminServiceEditAdminLabel</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceEditAdminLabel_editAdminLabel">Function: ISocialAdminServiceEditAdminLabel.editAdminLabel</h4>
+<pre><code>bool</code> editAdminLabel(<code><a href="TAdminLabel.html#Struct_TAdminLabel">TAdminLabel.TAdminLabel</a></code> label)
+</pre>
+编辑标签
+
+@param label
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminLabelById">Service: ISocialAdminServiceGetAdminLabelById</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminLabelById_getAdminLabelById">Function: ISocialAdminServiceGetAdminLabelById.getAdminLabelById</h4>
+<pre><code><a href="TAdminLabel.html#Struct_TAdminLabel">TAdminLabel.TAdminLabel</a></code> getAdminLabelById(<code>i32</code> id)
+</pre>
+根据标签id取标签信息
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceUpdateAdminLabelStatus">Service: ISocialAdminServiceUpdateAdminLabelStatus</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceUpdateAdminLabelStatus_updateAdminLabelStatus">Function: ISocialAdminServiceUpdateAdminLabelStatus.updateAdminLabelStatus</h4>
+<pre><code>bool</code> updateAdminLabelStatus(<code><a href="TAdminLabel.html#Struct_TAdminLabel">TAdminLabel.TAdminLabel</a></code> label)
+</pre>
+设置标签状态
+
+@param label
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDeleteAdminLabel">Service: ISocialAdminServiceDeleteAdminLabel</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDeleteAdminLabel_deleteAdminLabel">Function: ISocialAdminServiceDeleteAdminLabel.deleteAdminLabel</h4>
+<pre><code>bool</code> deleteAdminLabel(<code>i32</code> id)
+</pre>删除标签
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminPost">Service: ISocialAdminServiceAddAdminPost</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminPost_addAdminPost">Function: ISocialAdminServiceAddAdminPost.addAdminPost</h4>
+<pre><code>bool</code> addAdminPost(<code><a href="TAdminPost.html#Struct_TAdminPost">TAdminPost.TAdminPost</a></code> post,
+                  <code>list&lt;<code><a href="TAdminCityPost.html#Struct_TAdminCityPost">TAdminCityPost.TAdminCityPost</a></code>&gt;</code> cityPosts)
+</pre>
+新增帖子
+
+@param post
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminPostUseMobile">Service: ISocialAdminServiceAddAdminPostUseMobile</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminPostUseMobile_addAdminPostUseMobile">Function: ISocialAdminServiceAddAdminPostUseMobile.addAdminPostUseMobile</h4>
+<pre><code>bool</code> addAdminPostUseMobile(<code><a href="TAdminPost.html#Struct_TAdminPost">TAdminPost.TAdminPost</a></code> post,
+                           <code>list&lt;<code><a href="TAdminCityPost.html#Struct_TAdminCityPost">TAdminCityPost.TAdminCityPost</a></code>&gt;</code> cityPosts)
+</pre>
+新增帖子
+
+@param post
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminPostById">Service: ISocialAdminServiceGetAdminPostById</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminPostById_getAdminPostById">Function: ISocialAdminServiceGetAdminPostById.getAdminPostById</h4>
+<pre><code><a href="TAdminPost.html#Struct_TAdminPost">TAdminPost.TAdminPost</a></code> getAdminPostById(<code>i32</code> id)
+</pre>
+根据id取帖子详细信息
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminApplyList">Service: ISocialAdminServiceGetAdminApplyList</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminApplyList_getAdminApplyList">Function: ISocialAdminServiceGetAdminApplyList.getAdminApplyList</h4>
+<pre><code>list&lt;<code><a href="TAdminActivityApply.html#Struct_TAdminActivityApply">TAdminActivityApply.TAdminActivityApply</a></code>&gt;</code> getAdminApplyList(<code>i32</code> postId)
+</pre>
+根据帖子id取帖子的活动报名列表
+
+@param postId
+         帖子id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminCommentList">Service: ISocialAdminServiceGetAdminCommentList</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminCommentList_getAdminCommentList">Function: ISocialAdminServiceGetAdminCommentList.getAdminCommentList</h4>
+<pre><code><a href="TAdminCommentQueryData.html#Struct_TAdminCommentQueryData">TAdminCommentQueryData.TAdminCommentQueryData</a></code> getAdminCommentList(<code>i32</code> postId,
+                                                                  <code>string</code> content,
+                                                                  <code>i32</code> currentPage,
+                                                                  <code>i32</code> pageSize)
+</pre>
+根据帖子id取帖子评论列表
+
+@param postId
+         帖子id
+@param content
+         话题内容
+@param currentPage
+         当前页
+@param pageSize
+         显示多少条
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminComment">Service: ISocialAdminServiceAddAdminComment</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminComment_addAdminComment">Function: ISocialAdminServiceAddAdminComment.addAdminComment</h4>
+<pre><code>bool</code> addAdminComment(<code><a href="TAdminComment.html#Struct_TAdminComment">TAdminComment.TAdminComment</a></code> comment)
+</pre>
+新增评论
+
+@param comment
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminCommentUseMobile">Service: ISocialAdminServiceAddAdminCommentUseMobile</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminCommentUseMobile_addAdminCommentUseMobile">Function: ISocialAdminServiceAddAdminCommentUseMobile.addAdminCommentUseMobile</h4>
+<pre><code>bool</code> addAdminCommentUseMobile(<code><a href="TAdminComment.html#Struct_TAdminComment">TAdminComment.TAdminComment</a></code> comment)
+</pre>
+新增评论
+
+@param comment
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDeleteAdminComment">Service: ISocialAdminServiceDeleteAdminComment</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDeleteAdminComment_deleteAdminComment">Function: ISocialAdminServiceDeleteAdminComment.deleteAdminComment</h4>
+<pre><code>bool</code> deleteAdminComment(<code>i32</code> id)
+</pre>
+删除评论
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceAddAdminReason">Service: ISocialAdminServiceAddAdminReason</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceAddAdminReason_addAdminReason">Function: ISocialAdminServiceAddAdminReason.addAdminReason</h4>
+<pre><code>bool</code> addAdminReason(<code><a href="TAdminReason.html#Struct_TAdminReason">TAdminReason.TAdminReason</a></code> reason)
+</pre>
+新增原因
+
+@param reason
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDeleteAdminReason">Service: ISocialAdminServiceDeleteAdminReason</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDeleteAdminReason_deleteAdminReason">Function: ISocialAdminServiceDeleteAdminReason.deleteAdminReason</h4>
+<pre><code>bool</code> deleteAdminReason(<code>i32</code> id)
+</pre>
+删除原因
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminPostList">Service: ISocialAdminServiceGetAdminPostList</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminPostList_getAdminPostList">Function: ISocialAdminServiceGetAdminPostList.getAdminPostList</h4>
+<pre><code><a href="TAdminPostQueryData.html#Struct_TAdminPostQueryData">TAdminPostQueryData.TAdminPostQueryData</a></code> getAdminPostList(<code>string</code> content,
+                                                         <code>string</code> mobile,
+                                                         <code>string</code> nickName,
+                                                         <code>i32</code> objType,
+                                                         <code>i32</code> objId,
+                                                         <code>i64</code> createTimeStart,
+                                                         <code>i64</code> createTimeEnd,
+                                                         <code>i32</code> cityId,
+                                                         <code>i32</code> communityId,
+                                                         <code>i32</code> inform,
+                                                         <code>i32</code> currentPage,
+                                                         <code>i32</code> pageSize)
+</pre>
+查询帖子列表
+
+@param content
+         内容
+@param mobile
+         发布人手机号
+@param nickName
+           用户昵称
+@param objType
+         类型：1-标签 2-活动
+@param objId
+         相关类型的id
+@param createTimeStart
+         发布时间开始
+@param createTimeEnd
+         发布时间结束
+@param cityId
+         城市id
+@param communityId
+         小区id
+@param inform
+         是否被举报：1：是，0：否
+@param currentPage
+         当前页
+@param pageSize
+         显示多少条
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceUpdateAdminPostStatus">Service: ISocialAdminServiceUpdateAdminPostStatus</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceUpdateAdminPostStatus_updateAdminPostStatus">Function: ISocialAdminServiceUpdateAdminPostStatus.updateAdminPostStatus</h4>
+<pre><code>bool</code> updateAdminPostStatus(<code><a href="TAdminPost.html#Struct_TAdminPost">TAdminPost.TAdminPost</a></code> post)
+</pre>
+更新帖子状态
+
+@param post
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDeletePostInformFromPostId">Service: ISocialAdminServiceDeletePostInformFromPostId</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDeletePostInformFromPostId_deletePostInformFromPostId">Function: ISocialAdminServiceDeletePostInformFromPostId.deletePostInformFromPostId</h4>
+<pre><code>bool</code> deletePostInformFromPostId(<code>i32</code> postId)
+</pre>
+根据帖子id删除帖子举报
+
+@param postId
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDealWithIllegal">Service: ISocialAdminServiceDealWithIllegal</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDealWithIllegal_dealWithIllegal">Function: ISocialAdminServiceDealWithIllegal.dealWithIllegal</h4>
+<pre><code>bool</code> dealWithIllegal(<code>i32</code> postId)
+</pre>
+处理违规
+
+@param postId
+@returns
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDealWithLegitimate">Service: ISocialAdminServiceDealWithLegitimate</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDealWithLegitimate_dealWithLegitimate">Function: ISocialAdminServiceDealWithLegitimate.dealWithLegitimate</h4>
+<pre><code>bool</code> dealWithLegitimate(<code>i32</code> postId)
+</pre>
+处理不违规
+
+@param postId
+@returns
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminReasonList">Service: ISocialAdminServiceGetAdminReasonList</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminReasonList_getAdminReasonList">Function: ISocialAdminServiceGetAdminReasonList.getAdminReasonList</h4>
+<pre><code>list&lt;<code><a href="TAdminReason.html#Struct_TAdminReason">TAdminReason.TAdminReason</a></code>&gt;</code> getAdminReasonList()
+</pre>
+查询原因列表
+
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminReasonById">Service: ISocialAdminServiceGetAdminReasonById</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminReasonById_getAdminReasonById">Function: ISocialAdminServiceGetAdminReasonById.getAdminReasonById</h4>
+<pre><code><a href="TAdminReason.html#Struct_TAdminReason">TAdminReason.TAdminReason</a></code> getAdminReasonById(<code>i32</code> id)
+</pre>
+根据原因id取原因详细信息
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceUpdateAdminReason">Service: ISocialAdminServiceUpdateAdminReason</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceUpdateAdminReason_updateAdminReason">Function: ISocialAdminServiceUpdateAdminReason.updateAdminReason</h4>
+<pre><code>bool</code> updateAdminReason(<code><a href="TAdminReason.html#Struct_TAdminReason">TAdminReason.TAdminReason</a></code> reason)
+</pre>
+编辑原因
+
+@param reason
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceGetAdminPostInformList">Service: ISocialAdminServiceGetAdminPostInformList</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceGetAdminPostInformList_getAdminPostInformList">Function: ISocialAdminServiceGetAdminPostInformList.getAdminPostInformList</h4>
+<pre><code>list&lt;<code><a href="TAdminPostInform.html#Struct_TAdminPostInform">TAdminPostInform.TAdminPostInform</a></code>&gt;</code> getAdminPostInformList(<code>i32</code> postId)
+</pre>
+根据帖子id取帖子举报列表
+
+@param postId
+         帖子id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_ISocialAdminServiceDeleteAdminPost">Service: ISocialAdminServiceDeleteAdminPost</h3>
+<div class="definition"><h4 id="Fn_ISocialAdminServiceDeleteAdminPost_deleteAdminPost">Function: ISocialAdminServiceDeleteAdminPost.deleteAdminPost</h4>
+<pre><code>bool</code> deleteAdminPost(<code><a href="TAdminPost.html#Struct_TAdminPost">TAdminPost.TAdminPost</a></code> post)
+</pre>
+删除帖子
+
+@param post
+@return
+
+@author zhijian.li
+<br/></div></div></body></html>

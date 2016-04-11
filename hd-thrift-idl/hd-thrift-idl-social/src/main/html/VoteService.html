@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: VoteService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: VoteService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>VoteService</td><td><a href="#Svc_IVoteServiceGetVoteDetail">IVoteServiceGetVoteDetail</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetVoteDetail_getVoteDetail">getVoteDetail</a></li>
+</ul>
+<a href="#Svc_IVoteServiceVote">IVoteServiceVote</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceVote_vote">vote</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetServerTime">IVoteServiceGetServerTime</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetServerTime_getServerTime">getServerTime</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetVoteRankList">IVoteServiceGetVoteRankList</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetVoteRankList_getVoteRankList">getVoteRankList</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetVotedPost">IVoteServiceGetVotedPost</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetVotedPost_getVotedPost">getVotedPost</a></li>
+</ul>
+<a href="#Svc_IVoteServiceGetPostListByVoteId">IVoteServiceGetPostListByVoteId</a><br/>
+<ul>
+<li><a href="#Fn_IVoteServiceGetPostListByVoteId_getPostListByVoteId">getPostListByVoteId</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_IVoteServiceGetVoteDetail">Service: IVoteServiceGetVoteDetail</h3>
+投票活动服务
+
+@since 1.5.0
+@author yunbiao.liu
+@date 2015年2月29日
+
+<br/><div class="definition"><h4 id="Fn_IVoteServiceGetVoteDetail_getVoteDetail">Function: IVoteServiceGetVoteDetail.getVoteDetail</h4>
+<pre><code>string</code> getVoteDetail(<code>string</code> params)
+</pre>*
+* 查看投票活动详情
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceVote">Service: IVoteServiceVote</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceVote_vote">Function: IVoteServiceVote.vote</h4>
+<pre><code>string</code> vote(<code>string</code> params)
+</pre>*
+* 给帖子投票
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetServerTime">Service: IVoteServiceGetServerTime</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetServerTime_getServerTime">Function: IVoteServiceGetServerTime.getServerTime</h4>
+<pre><code>i64</code> getServerTime()
+</pre>
+获取服务器时间
+
+@return
+
+@author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetVoteRankList">Service: IVoteServiceGetVoteRankList</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetVoteRankList_getVoteRankList">Function: IVoteServiceGetVoteRankList.getVoteRankList</h4>
+<pre><code>string</code> getVoteRankList(<code>string</code> params)
+</pre>
+获取排行榜
+
+@return
+
+@author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetVotedPost">Service: IVoteServiceGetVotedPost</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetVotedPost_getVotedPost">Function: IVoteServiceGetVotedPost.getVotedPost</h4>
+<pre><code>string</code> getVotedPost(<code>string</code> params)
+</pre>*
+* 获取用户已投票的帖子列表
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div><h3 id="Svc_IVoteServiceGetPostListByVoteId">Service: IVoteServiceGetPostListByVoteId</h3>
+<div class="definition"><h4 id="Fn_IVoteServiceGetPostListByVoteId_getPostListByVoteId">Function: IVoteServiceGetPostListByVoteId.getPostListByVoteId</h4>
+<pre><code>string</code> getPostListByVoteId(<code>string</code> params)
+</pre>*
+* 根据voteid查询帖子列表
+*
+* @param params
+		参数
+* @return
+*
+* @author yunbiao.liu
+<br/></div></div></body></html>

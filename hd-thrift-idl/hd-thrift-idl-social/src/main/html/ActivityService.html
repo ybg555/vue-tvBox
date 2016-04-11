@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: ActivityService</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: ActivityService</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>ActivityService</td><td><a href="#Svc_IActivityServiceGetActivityList">IActivityServiceGetActivityList</a><br/>
+<ul>
+<li><a href="#Fn_IActivityServiceGetActivityList_getActivityList">getActivityList</a></li>
+</ul>
+<a href="#Svc_IActivityServiceGetActivityById">IActivityServiceGetActivityById</a><br/>
+<ul>
+<li><a href="#Fn_IActivityServiceGetActivityById_getActivityById">getActivityById</a></li>
+</ul>
+<a href="#Svc_IActivityServiceGetPostListByActivityId">IActivityServiceGetPostListByActivityId</a><br/>
+<ul>
+<li><a href="#Fn_IActivityServiceGetPostListByActivityId_getPostListByActivityId">getPostListByActivityId</a></li>
+</ul>
+</td>
+<td></td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_IActivityServiceGetActivityList">Service: IActivityServiceGetActivityList</h3>
+活动服务(前端）
+
+@since 1.1.0
+@author zhijian.li
+@date 2016年1月18日 下午3:54:36
+
+<br/><div class="definition"><h4 id="Fn_IActivityServiceGetActivityList_getActivityList">Function: IActivityServiceGetActivityList.getActivityList</h4>
+<pre><code>list&lt;<code>map&lt;<code>string</code>, <code>string</code>&gt;</code>&gt;</code> getActivityList(<code>i32</code> communityId,
+                                        <code>i32</code> currentPage,
+                                        <code>i32</code> pageSize)
+</pre>
+查询活动列表
+
+@param communityId
+         小区id
+@param currentPage
+         当前页
+@param pageSize
+         显示多少条
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityServiceGetActivityById">Service: IActivityServiceGetActivityById</h3>
+<div class="definition"><h4 id="Fn_IActivityServiceGetActivityById_getActivityById">Function: IActivityServiceGetActivityById.getActivityById</h4>
+<pre><code>map&lt;<code>string</code>, <code>string</code>&gt;</code> getActivityById(<code>i32</code> id)
+</pre>
+根据活动id取活动信息
+
+@param id
+@return
+
+@author zhijian.li
+<br/></div><h3 id="Svc_IActivityServiceGetPostListByActivityId">Service: IActivityServiceGetPostListByActivityId</h3>
+<div class="definition"><h4 id="Fn_IActivityServiceGetPostListByActivityId_getPostListByActivityId">Function: IActivityServiceGetPostListByActivityId.getPostListByActivityId</h4>
+<pre><code>list&lt;<code>map&lt;<code>string</code>, <code>string</code>&gt;</code>&gt;</code> getPostListByActivityId(<code>i32</code> id,
+                                                <code>i32</code> currentPage,
+                                                <code>i32</code> pageSize)
+</pre>
+根据活动id查询帖子列表
+
+@param id
+@param currentPage
+@param pageSize
+@return
+
+@author zhijian.li
+<br/></div></div></body></html>
