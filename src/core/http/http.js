@@ -4,7 +4,7 @@
 
 var thriftUtils = require('./thrift/thriftUtils.js'),
     ajax = require('./ajax/ajax.js'),
-    cookie = require('../../utils/cookie.js'),
+    cookie = require('../utils/cookie.js'),
     globalSuccessCallback,globalErrorCallback,globalBeforeRequestCallback;
 
 
