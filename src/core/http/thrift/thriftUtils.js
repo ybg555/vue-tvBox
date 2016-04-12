@@ -2,7 +2,9 @@
 var Thrift = require('./Thrift.js');
 
 var cookie = require('../../utils/cookie.js');
-var configCenter = require('../../configCenter.js');
+//var configCenter = require('../../configCenter.js');
+var globalConfig = require("../../../config.js");
+var thriftConfig = require("../../../thriftConfig.js");
 
 
 module.exports = {
@@ -62,8 +64,8 @@ module.exports = {
    */
     request : function(url,data) {
       var thriftRequest = this;
-      var globalConfig = configCenter.get('global');
-      var thriftConfig = configCenter.get('thrift');
+      //var globalConfig = configCenter.get('global');
+      //var thriftConfig = configCenter.get('thrift');
 
       if (thriftConfig[url]) {
         var configObj = thriftConfig[url];
