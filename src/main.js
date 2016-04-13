@@ -13,11 +13,11 @@ Vue.use(Router);
 //Vue.filter('fromNow', fromNow)
 //Vue.filter('domain', domain)
 
-var app = require('./core/application.js');
-var thriftConfig = require('./thriftConfig.js');
-var globalConfig = require('./config.js');
-app.setConfig('thrift',thriftConfig);
-app.setConfig('global',globalConfig);
+//var app = require('./core/application.js');
+//var thriftConfig = require('./thriftConfig.js');
+//var globalConfig = require('./config.js');
+//app.setConfig('thrift',thriftConfig);
+//app.setConfig('global',globalConfig);
 
 // routing
 var router = new Router();

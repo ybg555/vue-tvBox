@@ -51,15 +51,17 @@ export default {
       //    the entire object, because we don't want to update the page before
       //    the items are fetched.
       const page = +to.params.page
-      document.title = 'Vue.js HN Clone';
+      document.title = 'Blade';
 
-      http.request("api/social/iVoteService/getVoteList",{params:JSON.stringify({voteId: 1})}).then(function(res){
+      http.request("api/social/iVoteService/getVoteDetail",{params:JSON.stringify({voteId: 1})}).then(function(res){
+
           var _data = JSON.parse(res);
-          queryFaqList = _data.faqs;
-          pagination.currentPage = _data.currentPage;
-          pagination.pageSize = _data.pageSize;
-          pagination.totalPage = Math.ceil(_data.totalCount / _data.pageSize);
-          self.emit('queryFaqList_done');
+          console.log(_data);
+//          queryFaqList = _data.faqs;
+//          pagination.currentPage = _data.currentPage;
+//          pagination.pageSize = _data.pageSize;
+//          pagination.totalPage = Math.ceil(_data.totalCount / _data.pageSize);
+//          self.emit('queryFaqList_done');
       },function(err){
           console.warn(err);
       });

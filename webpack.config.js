@@ -4,10 +4,12 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname,'./src/main.js'),
+  entry: {
+    app: path.resolve(__dirname,'./src/main.js')
+  },
   output: {
-    path: path.resolve(__dirname,'./static'),
-    publicPath: '/static/',
+    path: path.resolve(__dirname,'./dist'),
+    publicPath: '/dist/',
     filename: 'build.js'
   },
   module: {
@@ -30,7 +32,11 @@ module.exports = {
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
-  }
+  },
+  cache: true,
+  debug: true,
+  //devtool: "#inline-source-map"
+
 }
 
 if (process.env.NODE_ENV === 'production') {

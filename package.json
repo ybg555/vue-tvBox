@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --progress --colors",
+    "dev": "webpack-dev-server --inline --progress --colors",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --display-error-details"
   },
   "repository": {
@@ -26,10 +26,14 @@
     "cli-color": "^1.1.0",
     "cross-env": "^1.0.5",
     "css-loader": "^0.21.0",
+    "express": "^4.13.4",
     "html-webpack-plugin": "^2.15.0",
+    "http-proxy": "^1.13.2",
     "js-beautify": "^1.6.2",
     "mkdirp": "^0.5.1",
+    "moment": "^2.12.0",
     "open-browser-webpack-plugin": "0.0.2",
+    "proxy-middleware": "^0.15.0",
     "rimraf": "^2.5.2",
     "stylus-loader": "^1.4.0",
     "vue-hot-reload-api": "^1.2.0",
